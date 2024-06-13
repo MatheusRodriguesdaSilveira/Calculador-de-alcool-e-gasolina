@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Calcular Gasolina ou Álcool</title>
+    <link href="/css/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/input.css">
+    <script src="https://kit.fontawesome.com/58fdf36e10.js" crossorigin="anonymous"></script>
+</head>
+<body> 
+<main class="max-w-full md:max-w-3xl flex flex-col justify-center items-center">
+
+    <img src="/img/gasolina.jpg"  width="240px" class="rounded-full m-10">
+    <h1 class="text-3xl font-bold text-white">Qual a melhor opção?</h1>
+   
+    <form onsubmit="calcular(event)" class="mx-10">
+
+            <label class="text-2xl text-white">Álcool (preço por litro):</label>
+            
+            <input id="alcool"
+            class="w-full h-12 rounded-2xl text-xl px-3 my-3"
+            type="number" 
+            placeholder="4.90" 
+            min="1" 
+            step="0.01"
+            required/>
+            
+            <label class="text-2xl text-white">Gasolina (preço por litro):</label>
+            
+            <input id="gasolina"
+            class="w-full h-12 rounded-2xl text-xl px-3 my-3" 
+            type="number" 
+            placeholder="6.50" 
+            min="1" 
+            step="0.01"
+            required/>
+            
+            <input 
+            type="submit" 
+            value="Calcular" 
+            class="text-white font-bold w-full h-12 rounded-2xl text-xl px-3 bg-blue-800 cursor-pointer hover:bg-cyan-500 duration-700"/>
+
+    </form>
+
+<section id="content-result" 
+class="bg-green-500 text-white max-w-lg p-5 px-7 text-center mt-7 rounded-md select-none hover:scale-110 duration-700 hidden"/>
+   
+    <span id="text-result" class="text-2xl font-bold my-2">Compensa usar Álcool</span>
+    <span id="alcool-result" class="flex flex-col">Álcool R$ 3,90</span>
+    <span id="gasolina-result" class="flex flex-col">Gasolina R$ 6,80</span>
+    
+</section> 
+
+</main>
+<br>
+<div class="info">
+    <span class="text-white text-2xl md:text-xl">Veja como é feito o Cálculo</span>
+</div>  
+ 
+    <span class="text-white flex justify-between"><i class="fa-solid fa-arrow-down md:text-2xl"></i></span>
+    <a href="calculo.html" class="">
+        <img class="hover:scale-110 duration-700 " src="/img/info.png" alt="Veja como é feito o calculo">
+
+    </a>
+</div>
+
+<script src="/js/script.js"></script>
+</body>
+</html>
